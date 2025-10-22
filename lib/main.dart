@@ -19,13 +19,20 @@ class MohanadPage extends StatefulWidget {
 }
 
 class MohanadAppState extends State<MohanadPage> {
-  String message = "البداية";
+  String message = "بسم الله الرحمن الرحيم";
+
+  int counter = 0;
   int count = 0;
+  int count2 = 0;
+  int count3 = 0;
 
   void resetCount() {
     setState(() {
-      message = "النهاية";
+      message = "إعادة";
+      counter = 0;
       count = 0;
+      count2 = 0;
+      count3 = 0;
     });
   }
 
@@ -54,8 +61,9 @@ class MohanadAppState extends State<MohanadPage> {
                 fontSize: 30,
               ),
             ),
+
             Text(
-              "$count",
+              "$counter",
               style: TextStyle(
                 color: Colors.brown,
                 fontWeight: FontWeight.bold,
@@ -65,21 +73,22 @@ class MohanadAppState extends State<MohanadPage> {
 
             Row(
               children: [
-                SizedBox(width: 25),
 
+                SizedBox(width: 25),
+                
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
                       message = "الله أكبر";
-                      count++;
+                      counter = ++count;
                     });
                   },
+
                   child: Text(
                     "الله أكبر",
                     style: TextStyle(
                       color: Colors.brown,
                       fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.grey
                     ),
                   ),
                 ),
@@ -90,7 +99,7 @@ class MohanadAppState extends State<MohanadPage> {
                   onPressed: () {
                     setState(() {
                       message = "الحمد الله";
-                      count++;
+                      counter = ++count2;
                     });
                   },
                   child: Text(
@@ -98,7 +107,6 @@ class MohanadAppState extends State<MohanadPage> {
                     style: TextStyle(
                       color: Colors.brown,
                       fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.grey
                     ),
                   ),
                 ),
@@ -109,7 +117,7 @@ class MohanadAppState extends State<MohanadPage> {
                   onPressed: () {
                     setState(() {
                       message = "سبحان الله";
-                      count++;
+                      counter = ++count3;
                     });
                   },
                   child: Text(
@@ -117,7 +125,6 @@ class MohanadAppState extends State<MohanadPage> {
                     style: TextStyle(
                       color: Colors.brown,
                       fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.grey
                     ),
                   ),
                 ),
@@ -129,11 +136,10 @@ class MohanadAppState extends State<MohanadPage> {
             ElevatedButton(
               onPressed: resetCount,
               child: Text(
-                "تصفير",
+                "إعادة",
                 style: TextStyle(
                   color: Colors.brown,
                   fontWeight: FontWeight.bold,
-                  backgroundColor: Colors.grey
                 ),
               ),
             ),
