@@ -22,15 +22,15 @@ class MohanadAppState extends State<MohanadPage> {
   String message = "بسم الله الرحمن الرحيم";
 
   int counter = 0;
-  int count = 0;
+  int count1 = 0;
   int count2 = 0;
   int count3 = 0;
 
   void resetCount() {
     setState(() {
-      message = "إعادة";
+      message = "بسم الله الرحمن الرحيم";
       counter = 0;
-      count = 0;
+      count1 = 0;
       count2 = 0;
       count3 = 0;
     });
@@ -80,7 +80,7 @@ class MohanadAppState extends State<MohanadPage> {
                   onPressed: () {
                     setState(() {
                       message = "الله أكبر";
-                      counter = ++count;
+                      counter = ++count1;
                     });
                   },
 
@@ -98,12 +98,12 @@ class MohanadAppState extends State<MohanadPage> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      message = "الحمد الله";
+                      message = "الحمد لله";
                       counter = ++count2;
                     });
                   },
                   child: Text(
-                    "الحمد الله",
+                    "الحمد لله",
                     style: TextStyle(
                       color: Colors.brown,
                       fontWeight: FontWeight.bold,
