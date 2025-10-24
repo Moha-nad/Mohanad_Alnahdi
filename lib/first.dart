@@ -17,6 +17,45 @@ class First extends StatelessWidget {
           title: Text("First Colmun and Row and Icon", style: TextStyle(fontSize: 17)),
           backgroundColor: const Color.fromARGB(255, 107, 153, 109),
           centerTitle: true,
+
+          actions: [
+            PopupMenuButton(
+              color: const Color.fromARGB(255, 131, 175, 197),
+              itemBuilder: (context)=>[
+              
+              PopupMenuItem(
+                child: Text("hellp"),
+                onTap: () {
+
+                },
+              ),
+              PopupMenuItem(
+                child: Text("settings"),
+                onTap: () {
+                  
+                },
+              ),
+            ])
+          ],
+        ),
+
+        drawer: Drawer(
+          backgroundColor: const Color.fromARGB(255, 122, 162, 182),
+          child: ListView(children: [
+
+            DrawerHeader(child: Text("side menu"),),
+
+            ListTile(
+              iconColor: Colors.blue,
+              textColor: Colors.blue,
+              tileColor: Colors.blueGrey,
+              leading: Icon(Icons.home),
+              title: Text("main page"),
+              onTap: () {
+                
+              },
+            )
+          ],),
         ),
 
         backgroundColor: Color.fromARGB(255, 142, 185, 160),
