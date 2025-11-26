@@ -40,7 +40,7 @@ class First extends StatelessWidget {
         ),
 
         drawer: Drawer(
-          backgroundColor: const Color.fromARGB(255, 122, 162, 182),
+          backgroundColor: const Color.fromARGB(255, 197, 216, 226),
           child: ListView(children: [
 
             DrawerHeader(child: Text("side menu"),),
@@ -51,6 +51,7 @@ class First extends StatelessWidget {
               tileColor: Colors.blueGrey,
               leading: Icon(Icons.home),
               title: Text("main page"),
+              subtitle: Text('go to main page'),
               onTap: () {
                 
               },
